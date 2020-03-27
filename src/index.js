@@ -1,5 +1,8 @@
 const express = require('express')
-require('dotenv').config()
+if(process.env.ENV == 'DEV'){
+    require('dotenv').config()
+}
+
 
 //insure mongoose coonnects to the db using this require statement
 require('./db/mongoose')
