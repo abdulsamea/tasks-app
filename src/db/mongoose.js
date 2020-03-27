@@ -11,6 +11,10 @@ if(process.env.ENV == 'DEV'){
 }
 
 
+console.log(process.env.MONGO_DB_PROD_URL)
+
+console.log(process.env.MONGO_DB_DEV_URL)
+
 mongoose.connect(conn, {
     useNewUrlParser : true,  
     useUnifiedTopology: true
