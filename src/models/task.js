@@ -14,7 +14,7 @@ const taskSchema  = new mongoose.Schema({
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
-        //link to User ref
+        //link to User ref model
         ref: 'User'
     }
 

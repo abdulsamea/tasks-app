@@ -1,15 +1,5 @@
-const express = require('express')
-//  if(process.env.ENV == 'DEV'){
-    // require('dotenv').config()
-//  }
+const app = require('./app')
 
-
-//insure mongoose coonnects to the db using this require statement
-require('./db/mongoose')
-const userRouter = require('./routers/user')
-const taskRouter = require('./routers/task')
-
-const app = express()
 const port = process.env.PORT
 
 //register express middleware, include this code before all app.use(%Router) 
@@ -20,17 +10,9 @@ const port = process.env.PORT
     
 // })
 
-
-app.use(express.json())
-app.use(userRouter)
-app.use(taskRouter)
-
-
 app.listen(port, () => {
     console.log('Tasks app is online on port ', port)
 })
-
-
 
 // example for relationship 
 
